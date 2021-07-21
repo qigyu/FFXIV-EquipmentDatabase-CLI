@@ -2,5 +2,7 @@ setup:
 	rm -rf .builds
 	swift package update
 	swift package generate-xcodeproj
-run:
-	Users/dodocha/workspace/FFXIV-EquipmentDatabase-CLI/.build/debug/FFXIV-EquipmentDatabase-CLI
+build: setup
+	swift build
+install: build
+	sudo cp ~/workspace/FFXIV-EquipmentDatabase-CLI/.build/arm64-apple-macosx/debug/ffxiv /usr/local/bin/ffxiv

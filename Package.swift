@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "FFXIV-EquipmentDatabase-CLI",
+    name: "ffxiv",
     dependencies: [
         .package(name: "Commander",
                  url: "https://github.com/kylef/Commander.git",
@@ -14,10 +14,10 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "FFXIV-EquipmentDatabase-CLI",
+            name: "ffxiv",
             dependencies: [ "Commander",]),
         .testTarget(
             name: "FFXIV-EquipmentDatabase-CLITests",
-            dependencies: ["FFXIV-EquipmentDatabase-CLI"]),
+            dependencies: ["ffxiv"]),
     ]
 )
